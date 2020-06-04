@@ -2,7 +2,7 @@
 Aplicação da NLW - Back End + Front End + React Native (Mobile)
 
 # Instruções Back End (Server)
- criar pasta do projeto (pasta Server) e acessar. </br>
+criar pasta do projeto (pasta Server) e acessar. </br>
 
 instalar dependências (dentro da pasta Server): 
  => npm init -y 
@@ -24,7 +24,7 @@ para executar a aplicação:
  => npn run dev 
  
 # Instruções Front End (Web) 
- criar pasta do projeto (pasta Web) e acessar. 
+criar pasta do projeto (pasta Web) e acessar. 
  
 instalar dependências (dentro da pasta Web): 
  => npx create-react-app web --template=typescript 
@@ -36,3 +36,25 @@ instalar dependências (dentro da pasta Web):
  
 para executar a aplicação: 
  => npm start 
+ 
+ # Instruções React Native (Mobile)
+criar pasta do projeto (pasta mobile) e acessar.
+
+instalar dependências (dentro da pasta Server): 
+ => npm install -g expo-cli
+ => expo init mobile
+       tipo -> blank(typescript)
+ => cd mobile
+ => expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
+ => npm install @react-navigation/native
+ => expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+ => npm install @react-navigation/stack
+ => expo install react-native-maps
+ => expo install expo-constants
+ => expo install react-native-svg
+ => npm install axios
+ => expo install expo-location
+ => expo install expo-mail-composer
+
+para executar a aplicação:
+ => npm start
