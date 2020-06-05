@@ -15,6 +15,13 @@ class PointsController{
             .distinct()
             .select('points.*');
 
+        const serializedPoints = points.map(point=> {
+            return {
+                ...point,
+                image_url: `https://192.168.15.8:3333/uploads/${point.filename}`
+            };
+        });
+
         return response.json(points);
     }
     
@@ -51,7 +58,7 @@ class PointsController{
     
 
         const point = {
-            image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+            image: request.file.filename,
             name,
             email,
             whatsapp,
@@ -65,7 +72,10 @@ class PointsController{
     
         const id_points = insertedIds[0];
     
-        const pointItems = items.map((id_items: number) => {
+        const pointItems = items
+        .split(',')
+        .map((item:string) => Number(item.trim))
+        .map((id_items: number) => {
             return{
                 id_items,
                 id_points,
