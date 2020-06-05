@@ -1,5 +1,5 @@
 # NextLevelWeek
-Aplicação da NLW - Back End + Front End + React Native (Mobile)
+Aplicação Pontos de coleta de resíduos da NLW - Back End + Front End + React Native (Mobile)
 
 # Instruções Back End (Server)
 criar pasta do projeto (pasta Server) e acessar. </br>
